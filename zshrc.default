@@ -1,0 +1,76 @@
+#!/bin/zsh
+
+#######################################################################
+#                          SpaceZ Config Env                          #
+#######################################################################
+export SPACEZ_CONFIG_ZSH_ROOT_DIR="${HOME}/SpaceZ/spacez_config_zsh"
+export SPACEZ_CONFIG_ZSH_OH_MY_ZSH_DIR="$HOME/.oh-my-zsh"
+export SPACEZ_CONFIG_ZSH_FZF_DIR="$HOME/.fzf"
+export SPACEZ_CONFIG_ZSH_KUBECTX_DIR="$HOME/.kubectx"
+export SPACEZ_CONFIG_ZSH_PYENV_DIR="$HOME/.pyenv"
+export SPACEZ_CONFIG_ZSH_PROXY="http://127.0.0.1:8080"
+
+# export SPACEZ_CONFIG_VIM_PYTHON2_PATH="/usr/bin/python2"
+# export SPACEZ_CONFIG_VIM_PYTHON3_PATH="/usr/bin/python3"
+# export SPACEZ_CONFIG_VIM_FZF_PATH="/usr/bin/fzf"
+# export SPACEZ_CONFIG_VIM_ENABLE_PLUGINS="1"
+# export SPACEZ_CONFIG_VIM_ENABLE_GUICOLORS="1"
+# export SPACEZ_CONFIG_VIM_GITHUB_MIRROR="https://git::@git.bugfree.show:30443/%s.git"
+
+# export SPACEZ_CONFIG_TMUX_ROOT_DIR="${HOME}/SpaceZ/spacez_config_tmux"
+
+#######################################################################
+#                               General                               #
+#######################################################################
+
+export PATH="${HOME}/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export ZSH="$SPACEZ_CONFIG_ZSH_OH_MY_ZSH_DIR"
+export MANPATH="/usr/local/man:${MANPATH}"
+export LANG="en_US.UTF-8"
+export EDITOR="vim"
+
+#######################################################################
+#                              oh-my-zsh                              #
+#######################################################################
+
+ZSH_THEME="afowler"
+CASE_SENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
+DISABLE_AUTO_UPDATE="true"
+HIST_STAMPS="yyyy-mm-dd"
+ZSH_CUSTOM="${SPACEZ_CONFIG_ZSH_ROOT_DIR}/custom"
+
+plugins=(
+zsh-completions                     # 命令补全
+zsh-autosuggestions                 # 基于命令历史的自动提示
+spacez_config_autosuggestions       # 配置zsh-autosuggestions
+
+colored-man-pages                   # 彩色的man page
+extract                             # 使用"x"一键解压文件
+z                                   # 快速跳转到最匹配的目录
+zsh_reload                          # 快速重载zsh配置
+
+sudo                                # 用sudo重新执行命令
+archlinux                           # archlinux的快捷键
+
+spacez_config_fzf                   # 模糊搜索命令历史
+spacez_config_tmux                  # tmux环境变量配置、别名
+spacez_config_vim                   # vim环境变量配置、别名
+
+git                                 # git命令补全与别名
+gitignore                           # 获取各种语言的gitignore模板
+
+docker                              # docker命令的补全与别名
+spacez_config_docker                # docker命令的自定义别名
+
+kubectl                             # kubectl命令的别名
+spacez_config_k8s                   # kubectl、helm命令的补全与别名
+
+spacez_config_pyenv                 # pyenv环境初始化
+golang
+spacez_config_golang                # golang环境变量配置
+)
+
+source ${ZSH}/oh-my-zsh.sh
+# 根据zsh-syntax-highlighting文档，这个插件必须在最后载入，所以不加入到plugins中，使用手动source
+source ${SPACEZ_CONFIG_ZSH_ROOT_DIR}/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh

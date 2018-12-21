@@ -1,0 +1,51 @@
+#!/bin/zsh
+
+# zsh的配置
+alias zshrc="vim $HOME/.zshrc"
+
+# ls
+if type lsd > /dev/null 2>&1; then
+    base_ls='lsd -hl --color=auto'
+else
+    base_ls='ls -hl --color=auto --ignore="*\.pyc" --ignore="*\.pyo" --ignore="__pycache__"'
+fi
+alias ll="$base_ls"
+alias la="$base_ls -A"
+alias ldot="$base_ls -d .*"
+
+# htop
+if type htop > /dev/null 2>&1; then
+    alias top="htop"
+fi
+
+# du
+alias dud='du -d 1 -h'
+alias duf='du -sh *'
+
+# df
+alias df='df -hT -x tmpfs -x devtmpfs -x overlay'
+
+# free
+alias free='free -h'
+
+# trash-cli
+if type trash > /dev/null 2>&1; then
+    alias rm='trash'
+fi
+
+# tree
+if type tree > /dev/null 2>&1; then
+    alias tree='tree -N'
+fi
+
+# grep/ag
+if type ag > /dev/null 2>&1; then
+    alias -g G='| ag'
+else
+    alias -g G='| grep'
+fi
+
+# ping
+if type prettyping > /dev/null 2>&1; then
+    alias ping='prettyping'
+fi
