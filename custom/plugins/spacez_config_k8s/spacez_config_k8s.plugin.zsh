@@ -19,8 +19,10 @@ function spacez_load_k8s() {
     fi
 
     if [ -d "$SPACEZ_CONFIG_ZSH_KUBECTX_DIR" ]; then
-        export PATH="${PATH}:${SPACEZ_CONFIG_ZSH_KUBECTX_DIR}/bin"
-        alias kns="kubens"
-        alias kctx="kubectx"
+        alias kns="$SPACEZ_CONFIG_ZSH_KUBECTX_DIR/kubens"
+        alias kctx="$SPACEZ_CONFIG_ZSH_KUBECTX_DIR/kubectx"
+
+        source "${SPACEZ_CONFIG_ZSH_KUBECTX_DIR}/completion/kubectx.zsh"
+        source "${SPACEZ_CONFIG_ZSH_KUBECTX_DIR}/completion/kubens.zsh"
     fi
 }
