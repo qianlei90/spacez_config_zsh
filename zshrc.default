@@ -72,7 +72,7 @@ spacez_config_pyenv                 # pyenv环境初始化
 golang
 spacez_config_golang                # golang环境变量配置
 
-spacez_config_asynctask             # shell snips
+spacez_config_asynctasks            # shell snips
 )
 
 source ${ZSH}/oh-my-zsh.sh
