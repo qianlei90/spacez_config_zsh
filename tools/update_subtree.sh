@@ -6,7 +6,7 @@ ROOT_DIR=$(dirname "$(dirname "$(readlink -f "$0")"))")
 CWD=$(pwd)
 
 function SUBTREE_PULL() {
-    git subtree pull --prefix=subtree/"$1" --squash ssh://git@git.bugfree.show:40051/zsh-users/"$1".git master
+    git subtree pull --prefix=custom/plugins/"$1" --squash ssh://git@git.bugfree.show:40051/zsh-users/"$1".git master
 }
 
 cd "$ROOT_DIR"
