@@ -7,6 +7,7 @@
 - [kubectx](https://github.com/ahmetb/kubectx)
 - [pyenv](https://github.com/pyenv/pyenv)
 - [asynctasks.vim](https://github.com/skywind3000/asynctasks.vim)
+- [g](https://github.com/stefanmaric/g)
 
 ## 二、使用
 
@@ -23,7 +24,8 @@ $ cp zshrc.default ~/.zshrc
 | `SPACEZ_CONFIG_ZSH_FZF_DIR`        | `fzf`的路径          | `~/.fzf`                |
 | `SPACEZ_CONFIG_ZSH_KUBECTX_DIR`    | `kubectx`的路径      | `~/.kubectx`            |
 | `SPACEZ_CONFIG_ZSH_PYENV_DIR`      | `pyenv`的路径        | `~/.pyenv`              |
-| `SPACEZ_CONFIG_ZSH_ASYNCTASKS_DIR` | `asynctasks`的路径   | `~/.asynctasks.vim`      |
+| `SPACEZ_CONFIG_ZSH_ASYNCTASKS_DIR` | `asynctasks`的路径   | `~/.asynctasks.vim`     |
+| `SPACEZ_CONFIG_ZSH_G_DIR`          | `g`的路径            | `~/.g`                  |
 | `SPACEZ_CONFIG_ZSH_PROXY`          | 代理地址，可以不配置 | `http://127.0.0.1:8118` |
 
 将环境变量写入`~/.zshrc`中
