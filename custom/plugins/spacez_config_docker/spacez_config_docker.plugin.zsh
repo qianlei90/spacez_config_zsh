@@ -14,7 +14,7 @@ if type docker > /dev/null 2>&1; then
     alias dps=docker_container_display
 
     function docker_images_display() {
-        result=$(docker images $@ --format "table {{.Repository}}\t{{.Tag}}\t{{.ID}}\t{{.Size}}" | grep -v '<none>')
+        result=$(docker images $@ --format "table {{.Repository}}\t{{.Tag}}\t{{.ID}}\t{{.Size}}" | grep -v -E '^<none>')
         echo ${result} | head -1 && echo ${result} | sed '1d' | sort
         unset result
     }
