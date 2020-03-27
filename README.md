@@ -4,7 +4,6 @@
 
 - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
 - [fzf](https://github.com/junegunn/fzf)
-- [kubectx](https://github.com/ahmetb/kubectx)
 - [pyenv](https://github.com/pyenv/pyenv)
 - [asynctasks.vim](https://github.com/skywind3000/asynctasks.vim)
 - [g](https://github.com/stefanmaric/g)
@@ -22,7 +21,6 @@ $ cp zshrc.default ~/.zshrc
 | `SPACEZ_CONFIG_ZSH_ROOT_DIR`       | 本项目所在的路径     | **没有默认值**          |
 | `SPACEZ_CONFIG_ZSH_OH_MY_ZSH_DIR`  | `oh-my-zsh`的路径    | `~/.oh-my-zsh`          |
 | `SPACEZ_CONFIG_ZSH_FZF_DIR`        | `fzf`的路径          | `~/.fzf`                |
-| `SPACEZ_CONFIG_ZSH_KUBECTX_DIR`    | `kubectx`的路径      | `~/.kubectx`            |
 | `SPACEZ_CONFIG_ZSH_PYENV_DIR`      | `pyenv`的路径        | `~/.pyenv`              |
 | `SPACEZ_CONFIG_ZSH_ASYNCTASKS_DIR` | `asynctasks`的路径   | `~/.asynctasks.vim`     |
 | `SPACEZ_CONFIG_ZSH_G_DIR`          | `g`的路径            | `~/.g`                  |

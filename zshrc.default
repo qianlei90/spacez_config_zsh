@@ -6,7 +6,6 @@
 export SPACEZ_CONFIG_ZSH_ROOT_DIR="${HOME}/SpaceZ/spacez_config_zsh"
 export SPACEZ_CONFIG_ZSH_OH_MY_ZSH_DIR="$HOME/.oh-my-zsh"
 export SPACEZ_CONFIG_ZSH_FZF_DIR="$HOME/.fzf"
-export SPACEZ_CONFIG_ZSH_KUBECTX_DIR="$HOME/.kubectx"
 export SPACEZ_CONFIG_ZSH_PYENV_DIR="$HOME/.pyenv"
 export SPACEZ_CONFIG_ZSH_ASYNCTASKS_DIR="$HOME/.asynctasks.vim"
 export SPACEZ_CONFIG_ZSH_G_DIR="$HOME/.g"
