@@ -49,3 +49,8 @@ fi
 if type prettyping > /dev/null 2>&1; then
     alias ping='prettyping'
 fi
+
+# json parser
+if type jq > /dev/null 2>&1 && type jid > /dev/null 2>&1; then
+    alias -g J='| jid -p | jq'
+fi
