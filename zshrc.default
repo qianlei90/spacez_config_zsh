@@ -3,30 +3,31 @@
 #######################################################################
 #                          SpaceZ Config Env                          #
 #######################################################################
-export SPACEZ_CONFIG_ZSH_ROOT_DIR="${HOME}/SpaceZ/spacez_config_zsh"
-export SPACEZ_CONFIG_ZSH_OH_MY_ZSH_DIR="$HOME/.oh-my-zsh"
-export SPACEZ_CONFIG_ZSH_FZF_DIR="$HOME/.fzf"
-export SPACEZ_CONFIG_ZSH_PYENV_DIR="$HOME/.pyenv"
-export SPACEZ_CONFIG_ZSH_ASYNCTASKS_DIR="$HOME/.asynctasks.vim"
-export SPACEZ_CONFIG_ZSH_G_DIR="$HOME/.g"
-export SPACEZ_CONFIG_ZSH_PROXY="http://127.0.0.1:8080"
+export SPACEZ_CONFIG_ZSH_ROOT_DIR="${SPACEZ_CONFIG_ZSH_ROOT_DIR:-${HOME}/SpaceZ/spacez_config_zsh}"
+export SPACEZ_CONFIG_ZSH_OH_MY_ZSH_DIR="${SPACEZ_CONFIG_ZSH_OH_MY_ZSH_DIR:-${HOME}/.oh-my-zsh}"
+export SPACEZ_CONFIG_ZSH_FZF_DIR="${SPACEZ_CONFIG_ZSH_FZF_DIR:-${HOME}/.fzf}"
+export SPACEZ_CONFIG_ZSH_PYENV_DIR="${SPACEZ_CONFIG_ZSH_PYENV_DIR:-${HOME}/.pyenv}"
+export SPACEZ_CONFIG_ZSH_ASYNCTASKS_DIR="${SPACEZ_CONFIG_ZSH_ASYNCTASKS_DIR:-${HOME}/.asynctasks.vim}"
+export SPACEZ_CONFIG_ZSH_G_DIR="${SPACEZ_CONFIG_ZSH_G_DIR:-${HOME}/.g}"
+export SPACEZ_CONFIG_ZSH_PROXY="${SPACEZ_CONFIG_ZSH_PROXY:-http://127.0.0.1:8080}"
 
-# export SPACEZ_CONFIG_VIM_ROOT_DIR="${HOME}/.spacez_config_vim"
-# export SPACEZ_CONFIG_VIM_PYTHON2_PATH="/usr/bin/python2"
-# export SPACEZ_CONFIG_VIM_PYTHON3_PATH="/usr/bin/python3"
-# export SPACEZ_CONFIG_VIM_FZF_PATH="/usr/bin/fzf"
-# export SPACEZ_CONFIG_VIM_ENABLE_PLUGINS="1"
-# export SPACEZ_CONFIG_VIM_ENABLE_GUICOLORS="1"
-# export SPACEZ_CONFIG_VIM_GITHUB_MIRROR="https://git::@git.bugfree.show:30443/%s.git"
+export SPACEZ_CONFIG_VIM_ROOT_DIR="${SPACEZ_CONFIG_VIM_ROOT_DIR:-${HOME}/SpaceZ/spacez_config_vim}"
+export SPACEZ_CONFIG_VIM_PYTHON2_PATH="${SPACEZ_CONFIG_VIM_PYTHON2_PATH:-/usr/bin/python2}"
+export SPACEZ_CONFIG_VIM_PYTHON3_PATH="${SPACEZ_CONFIG_VIM_PYTHON3_PATH:-/usr/bin/python3}"
+export SPACEZ_CONFIG_VIM_FZF_PATH="${SPACEZ_CONFIG_VIM_FZF_PATH:-/usr/bin/fzf}"
+export SPACEZ_CONFIG_VIM_ENABLE_PLUGINS="${SPACEZ_CONFIG_VIM_ENABLE_PLUGINS:-1}"
+export SPACEZ_CONFIG_VIM_ENABLE_GUICOLORS="${SPACEZ_CONFIG_VIM_ENABLE_GUICOLORS:-1}"
+export SPACEZ_CONFIG_VIM_GITHUB_MIRROR="${SPACEZ_CONFIG_VIM_GITHUB_MIRROR:-https://git::@git.bugfree.show:30443/%s.git}"
 
-# export SPACEZ_CONFIG_TMUX_ROOT_DIR="${HOME}/SpaceZ/spacez_config_tmux"
+export SPACEZ_CONFIG_TMUX_ROOT_DIR="${SPACEZ_CONFIG_TMUX_ROOT_DIR:-${HOME}/SpaceZ/spacez_config_tmux}"
 
 #######################################################################
 #                               General                               #
 #######################################################################
 
 export PATH="${HOME}/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export ZSH="$SPACEZ_CONFIG_ZSH_OH_MY_ZSH_DIR"
+export ZSH="${SPACEZ_CONFIG_ZSH_OH_MY_ZSH_DIR}"
+export ZSH_CACHE_DIR="${SPACEZ_CONFIG_ZSH_ROOT_DIR}/cache"
 export MANPATH="/usr/local/man:${MANPATH}"
 export LANG="en_US.UTF-8"
 export EDITOR="vim"
