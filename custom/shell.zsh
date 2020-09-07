@@ -22,14 +22,6 @@ fi
 alias dud='du -d 1 -h'
 alias duf='du -sh *'
 
-# df
-base_df='df -hT -x tmpfs -x devtmpfs -x overlay'
-if [ "$EUID" -ne 0 ]; then
-    alias df="sudo $base_df"
-else
-    alias df="$base_df"
-fi
-
 # free
 alias free='free -h'
 
@@ -59,3 +51,23 @@ fi
 if type jq > /dev/null 2>&1 && type jid > /dev/null 2>&1; then
     alias -g J='| jid -p | jq'
 fi
+
+func load_shell_for_mac() {
+    # df
+    alias df='df -H'
+}
+
+func load_shell_for_linux() {
+    # df
+    base_df='df -hT -x tmpfs -x devtmpfs -x overlay'
+    if [ "$EUID" -ne 0 ]; then
+        alias df="sudo $base_df"
+    else
+        alias df="$base_df"
+    fi
+}
+
+case "$OSTYPE" in
+    darwin*) load_shell_for_mac ;;
+    linux-gnu*) load_shell_for_linux ;;
+esac
