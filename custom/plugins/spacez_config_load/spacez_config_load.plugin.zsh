@@ -3,4 +3,4 @@
 PLUGIN_DIR=$(dirname $0)
 
 source ${PLUGIN_DIR}/k8s.zsh
-source ${PLUGIN_DIR}/pyenv
+source ${PLUGIN_DIR}/pyenv.zsh

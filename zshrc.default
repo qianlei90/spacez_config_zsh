@@ -51,27 +51,25 @@ colored-man-pages                   # 彩色的man page
 extract                             # 使用"x"一键解压文件
 z                                   # 快速跳转到最匹配的目录
 zsh_reload                          # 快速重载zsh配置
-
 sudo                                # 用sudo重新执行命令
-archlinux                           # archlinux的快捷键
-
-spacez_config_fzf                   # 模糊搜索命令历史
-spacez_config_tmux                  # tmux环境变量配置、别名
-spacez_config_vim                   # vim环境变量配置、别名
-
-git                                 # git命令补全与别名
-gitignore                           # 获取各种语言的gitignore模板
-
-docker                              # docker命令的补全与别名
-spacez_config_docker                # docker命令的自定义别名
-
-
-spacez_config_pyenv                 # pyenv环境初始化
-golang
-spacez_config_golang                # golang环境变量配置
 
 spacez_config_load
 )
+
+function add_to_plugin() {
+    if command -v $1 > /dev/null; then
+        plugins+=(${@:2})
+    fi
+}
+
+add_to_plugin pacman archlinux
+add_to_plugin brew brew
+add_to_plugin docker docker spacez_config_docker
+add_to_plugin fzf spacez_config_fzf
+add_to_plugin go spacez_config_golang
+add_to_plugin tmux spacez_config_tmux
+add_to_plugin nvim spacez_config_vim
+add_to_plugin git git gitignore
 
 source ${ZSH}/oh-my-zsh.sh
 # 根据zsh-syntax-highlighting文档，这个插件必须在最后载入，所以不加入到plugins中，使用手动source
