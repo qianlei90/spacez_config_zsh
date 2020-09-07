@@ -65,12 +65,12 @@ gitignore                           # 获取各种语言的gitignore模板
 docker                              # docker命令的补全与别名
 spacez_config_docker                # docker命令的自定义别名
 
-kubectl                             # kubectl命令的别名
-spacez_config_k8s                   # kubectl、helm命令的补全与别名
 
 spacez_config_pyenv                 # pyenv环境初始化
 golang
 spacez_config_golang                # golang环境变量配置
+
+spacez_config_load
 )
 
 source ${ZSH}/oh-my-zsh.sh
