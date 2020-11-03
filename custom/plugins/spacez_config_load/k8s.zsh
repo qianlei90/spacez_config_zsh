@@ -5,5 +5,6 @@ function load_k8s() {
 
     if type kubectl > /dev/null 2>&1; then
         alias k="kubectl"
+        alias -g Y="-o yaml"
     fi
 }
