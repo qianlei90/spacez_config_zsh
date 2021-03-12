@@ -21,7 +21,6 @@ $ cp zshrc.default ~/.zshrc
 | `SPACEZ_CONFIG_ZSH_OH_MY_ZSH_DIR`  | `oh-my-zsh`的路径    | `~/.oh-my-zsh`          |
 | `SPACEZ_CONFIG_ZSH_FZF_DIR`        | `fzf`的路径          | `~/.fzf`                |
 | `SPACEZ_CONFIG_ZSH_PYENV_DIR`      | `pyenv`的路径        | `~/.pyenv`              |
-| `SPACEZ_CONFIG_ZSH_G_DIR`          | `g`的路径            | `~/.g`                  |
 | `SPACEZ_CONFIG_ZSH_PROXY`          | 代理地址，可以不配置 | `http://127.0.0.1:8118` |
 
 将环境变量写入`~/.zshrc`中
