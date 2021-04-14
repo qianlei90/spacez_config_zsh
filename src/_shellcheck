@@ -1,6 +1,6 @@
-#compdef exportfs
+#compdef shellcheck
 # ------------------------------------------------------------------------------
-# Copyright (c) 2011 Github zsh-users - http://github.com/zsh-users
+# Copyright (c) 2021 Github zsh-users - http://github.com/zsh-users
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -28,24 +28,38 @@
 # Description
 # -----------
 #
-#  Completion script for nfs's exportfs - maintain table of exported NFS file systems.
+#  Completion script for shellcheck (https://github.com/koalaman/shellcheck)
 #
 # ------------------------------------------------------------------------------
 # Authors
 # -------
 #
-#  * Timofey Titovets <nefelim4ag@gmail.com>
+#  * Khue Nguyen (https://github.com/Z5483)
 #
 # ------------------------------------------------------------------------------
-_exportfs() {
-  _values -w 'option' \
-    '(-i)-a[Export or unexport all directories]' \
-    '(-a -r -u)-i[Ignore the /etc/exports file and files under /etc/exports.d directory]' \
-    '(-i)-r[Reexport  all  directories]' \
-    '(-i)-u[Unexport one or more directories]' \
-    '-f[Flush everything out of export table]' \
-    '-o[option1,option2.. Specify a list of export options]' \
-    '-s[Display the current export list suitable for /etc/exports]' \
-    '-v[Be verbose]'
-}
-_exportfs "$@"
+
+_arguments \
+  {-a,--check-sourced}'[include warnings from sourced file]' \
+  {-C,--color=}'[specify color]:color:(auto always never)' \
+  {-i,--include=}'[consider only given types of warnings]:error code' \
+  {-e,--exclude=}'[exclude given types of warnings]:error code' \
+  {-f,--format=}'[specify output format]:format:(checkstyle diff gcc json json1 quiet tty)' \
+  '--list-optional[list checks disabled by default]' \
+  "--norc[don't look for .shellcheckrc files]" \
+  {-o,--enable=}"[give list of optional checks to enable (or 'all')]:error code" \
+  {-P,--source-path=}'[specify path when looking for sourced files]:_files -/' \
+  {-s,--shell=}'[specify dialect]:dialect:(sh bash dash ksh)' \
+  {-S,--severity=}'[specify minimum severity of errors to consider]:severity:(error warning info style)' \
+  {-V,--version}'[print version information]' \
+  {-W,--wiki-link-count=}'[specify number of wiki links to show, when applicable]:number' \
+  {-x,--external-sources}'[allow outside sources]' \
+  '--help[show this usage summary and exit]' \
+  '*: :_files'
+
+# Local Variables:
+# mode: Shell-Script
+# sh-indentation: 2
+# indent-tabs-mode: nil
+# sh-basic-offset: 2
+# End:
+# vim: ft=zsh sw=2 ts=2 et
