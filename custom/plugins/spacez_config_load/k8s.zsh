@@ -8,8 +8,4 @@ function load_k8s() {
         alias k="kubectl"
         alias -g Y="-o yaml"
     fi
-
-    if [ $commands[vela] ]; then
-        source <(vela completion zsh)
-    fi
 }
