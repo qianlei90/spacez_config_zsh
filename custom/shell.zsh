@@ -52,6 +52,11 @@ if type jq > /dev/null 2>&1 && type jid > /dev/null 2>&1; then
     alias -g J='| jid -p | jq'
 fi
 
+# curl
+if type curlie > /dev/null 2>&1; then
+    alias curl="curlie"
+fi
+
 func load_shell_for_mac() {
     # df
     alias df='df -H'
