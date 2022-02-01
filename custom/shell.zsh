@@ -59,7 +59,11 @@ func load_shell_for_mac() {
 
 func load_shell_for_linux() {
     # df
-    base_df='df -hT -x tmpfs -x devtmpfs -x overlay'
+    if type duf > /dev/null 2>&1; then
+        base_df='duf'
+    else
+        base_df='df -hT -x tmpfs -x devtmpfs -x overlay'
+    fi
     if [ "$EUID" -ne 0 ]; then
         alias df="sudo $base_df"
     else
