@@ -75,7 +75,6 @@ add_to_plugin docker docker spacez_config_docker
 add_to_plugin fzf spacez_config_fzf
 add_to_plugin go spacez_config_golang
 add_to_plugin tmux spacez_config_tmux
-add_to_plugin nvim spacez_config_vim
 add_to_plugin git git gitignore
 
 source ${ZSH}/oh-my-zsh.sh
