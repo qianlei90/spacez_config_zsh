@@ -2,7 +2,7 @@
 
 set -e
 
-ROOT_DIR=$(dirname "$(dirname "$(readlink -f "$0")"))")
+ROOT_DIR=$(dirname "$(dirname $0)")
 CWD=$(pwd)
 
 function SUBTREE_PULL() {
