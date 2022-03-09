@@ -1,12 +1,5 @@
 #!/bin/zsh
 
-if type lvim > /dev/null 2>&1; then
-    export EDITOR="lvim"
-    alias v="lvim"
-    alias vi="lvim"
-    alias vim='lvim'
-fi
-
 # zsh的配置
 alias zshrc="vim $HOME/.zshrc"
 
