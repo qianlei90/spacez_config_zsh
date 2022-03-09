@@ -5,7 +5,6 @@
 - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
 - [fzf](https://github.com/junegunn/fzf)
 - [pyenv](https://github.com/pyenv/pyenv)
-- [g](https://github.com/stefanmaric/g)
 
 ## 二、使用
 
